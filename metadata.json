@@ -1,5 +1,6 @@
+
 {
-  "name": "Calculadora-juros-compostos",
-  "description": "Uma ferramenta completa e educativa para calcular o crescimento do seu patrimônio através do poder dos juros compostos, com gráficos detalhados e tabelas de evolução mensal.\n\nCalculaora clone investidor sardinha(testeai)",
+  "name": "GHz-Invest-Calculadora",
+  "description": "Uma ferramenta completa e educativa para calcular o crescimento do seu patrimônio através do poder dos juros compostos, com gráficos detalhados e tabelas de evolução mensal.\n\nCalculaora GHz Invest",
   "requestFramePermissions": []
 }
