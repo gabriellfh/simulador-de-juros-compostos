@@ -51,18 +51,13 @@ const App: React.FC = () => {
     <div className="min-h-screen">
       {/* Header / Navbar */}
       <header className="bg-green-700 text-white py-6 shadow-lg mb-8">
-        <div className="container mx-auto px-4 max-w-6xl flex items-center justify-between">
+        <div className="container mx-auto px-4 max-w-6xl flex items-center">
           <div className="flex items-center gap-3">
             <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
             </svg>
             <h1 className="text-xl font-bold tracking-tight">InvestSim</h1>
           </div>
-          <nav className="hidden md:flex gap-6 text-sm font-medium">
-            <a href="#" className="hover:text-green-200 transition-colors">Simulador</a>
-            <a href="#" className="hover:text-green-200 transition-colors">Artigos</a>
-            <a href="#" className="hover:text-green-200 transition-colors">Ferramentas</a>
-          </nav>
         </div>
       </header>
 
