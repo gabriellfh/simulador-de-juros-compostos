@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, AreaChart, Area } from 'recharts';
+import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 import { CalculationResult, SummaryData } from '../types';
 import { formatCurrency } from '../utils/calculations';
 
@@ -42,17 +42,7 @@ const ResultsSection: React.FC<ResultsSectionProps> = ({ summary, results }) => 
         <h3 className="text-xl font-bold text-green-700 text-center mb-8">Gráfico de Evolução</h3>
         <div className="h-[400px] w-full">
           <ResponsiveContainer width="100%" height="100%">
-            <AreaChart data={chartData} margin={{ top: 10, right: 30, left: 40, bottom: 0 }}>
-              <defs>
-                <linearGradient id="colorInterest" x1="0" y1="0" x2="0" y2="1">
-                  <stop offset="5%" stopColor="#15803d" stopOpacity={0.8}/>
-                  <stop offset="95%" stopColor="#15803d" stopOpacity={0}/>
-                </linearGradient>
-                <linearGradient id="colorInvested" x1="0" y1="0" x2="0" y2="1">
-                  <stop offset="5%" stopColor="#374151" stopOpacity={0.8}/>
-                  <stop offset="95%" stopColor="#374151" stopOpacity={0}/>
-                </linearGradient>
-              </defs>
+            <LineChart data={chartData} margin={{ top: 10, right: 30, left: 40, bottom: 0 }}>
               <CartesianGrid strokeDasharray="3 3" vertical={false} />
               <XAxis 
                 dataKey="month" 
@@ -66,23 +56,25 @@ const ResultsSection: React.FC<ResultsSectionProps> = ({ summary, results }) => 
                 labelFormatter={(label) => `Mês ${label}`}
               />
               <Legend verticalAlign="top" align="center" height={36}/>
-              <Area 
+              <Line 
                 type="monotone" 
                 dataKey="totalAccumulated" 
                 name="Total Acumulado" 
-                stroke="#15803d" 
-                fillOpacity={1} 
-                fill="url(#colorInterest)" 
+                stroke="#4ade80" 
+                strokeWidth={2}
+                dot={false}
+                activeDot={{ r: 6 }}
               />
-              <Area 
+              <Line 
                 type="monotone" 
                 dataKey="totalInvested" 
                 name="Valor Investido" 
-                stroke="#374151" 
-                fillOpacity={1} 
-                fill="url(#colorInvested)" 
+                stroke="#06b6d4" 
+                strokeWidth={2}
+                dot={false}
+                activeDot={{ r: 4 }}
               />
-            </AreaChart>
+            </LineChart>
           </ResponsiveContainer>
         </div>
       </div>
