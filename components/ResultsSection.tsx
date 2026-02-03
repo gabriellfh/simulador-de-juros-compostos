@@ -19,11 +19,11 @@ const ResultsSection: React.FC<ResultsSectionProps> = ({ summary, results }) => 
 
   return (
     <div className="mt-12 space-y-10 animate-in fade-in duration-700">
-      <h2 className="text-3xl font-bold text-red-800 border-b pb-2">Resultado</h2>
+      <h2 className="text-3xl font-bold text-green-700 border-b pb-2 border-green-100">Resultado</h2>
 
       {/* Summary Cards */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <div className="bg-red-800 text-white p-6 rounded-xl shadow-md transform hover:scale-105 transition-transform">
+        <div className="bg-green-700 text-white p-6 rounded-xl shadow-md transform hover:scale-105 transition-transform">
           <p className="text-xs uppercase tracking-wider font-semibold opacity-90 mb-1 text-center">Valor total final</p>
           <p className="text-3xl font-bold text-center">{formatCurrency(summary.totalFinal)}</p>
         </div>
@@ -39,18 +39,18 @@ const ResultsSection: React.FC<ResultsSectionProps> = ({ summary, results }) => 
 
       {/* Chart Section */}
       <div className="bg-white p-6 rounded-xl shadow-md border border-gray-100">
-        <h3 className="text-xl font-bold text-red-800 text-center mb-8">Gráfico de Evolução</h3>
+        <h3 className="text-xl font-bold text-green-700 text-center mb-8">Gráfico de Evolução</h3>
         <div className="h-[400px] w-full">
           <ResponsiveContainer width="100%" height="100%">
             <AreaChart data={chartData} margin={{ top: 10, right: 30, left: 40, bottom: 0 }}>
               <defs>
                 <linearGradient id="colorInterest" x1="0" y1="0" x2="0" y2="1">
-                  <stop offset="5%" stopColor="#991b1b" stopOpacity={0.8}/>
-                  <stop offset="95%" stopColor="#991b1b" stopOpacity={0}/>
+                  <stop offset="5%" stopColor="#15803d" stopOpacity={0.8}/>
+                  <stop offset="95%" stopColor="#15803d" stopOpacity={0}/>
                 </linearGradient>
                 <linearGradient id="colorInvested" x1="0" y1="0" x2="0" y2="1">
-                  <stop offset="5%" stopColor="#000000" stopOpacity={0.8}/>
-                  <stop offset="95%" stopColor="#000000" stopOpacity={0}/>
+                  <stop offset="5%" stopColor="#374151" stopOpacity={0.8}/>
+                  <stop offset="95%" stopColor="#374151" stopOpacity={0}/>
                 </linearGradient>
               </defs>
               <CartesianGrid strokeDasharray="3 3" vertical={false} />
@@ -70,7 +70,7 @@ const ResultsSection: React.FC<ResultsSectionProps> = ({ summary, results }) => 
                 type="monotone" 
                 dataKey="totalAccumulated" 
                 name="Total Acumulado" 
-                stroke="#991b1b" 
+                stroke="#15803d" 
                 fillOpacity={1} 
                 fill="url(#colorInterest)" 
               />
@@ -78,7 +78,7 @@ const ResultsSection: React.FC<ResultsSectionProps> = ({ summary, results }) => 
                 type="monotone" 
                 dataKey="totalInvested" 
                 name="Valor Investido" 
-                stroke="#000000" 
+                stroke="#374151" 
                 fillOpacity={1} 
                 fill="url(#colorInvested)" 
               />
@@ -89,7 +89,7 @@ const ResultsSection: React.FC<ResultsSectionProps> = ({ summary, results }) => 
 
       {/* Table Section */}
       <div className="bg-white rounded-xl shadow-md border border-gray-100 overflow-hidden">
-        <h3 className="text-xl font-bold text-red-800 text-center py-4 bg-gray-50 border-b">Tabela de Evolução</h3>
+        <h3 className="text-xl font-bold text-green-700 text-center py-4 bg-gray-50 border-b">Tabela de Evolução</h3>
         <div className="overflow-x-auto max-h-[500px]">
           <table className="min-w-full divide-y divide-gray-200">
             <thead className="bg-gray-100 sticky top-0 z-10">

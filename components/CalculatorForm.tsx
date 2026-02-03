@@ -30,13 +30,13 @@ const CalculatorForm: React.FC<CalculatorFormProps> = ({ inputs, setInputs, onCa
 
   return (
     <div className="bg-white p-6 rounded-xl shadow-md border border-gray-100">
-      <h2 className="text-2xl font-bold text-red-800 mb-6 text-center md:text-left">Simulador de Juros Compostos</h2>
+      <h2 className="text-2xl font-bold text-green-700 mb-6 text-center md:text-left">Simulador de Juros Compostos</h2>
       
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
         {/* Valor Inicial */}
         <div className="space-y-2">
           <label className="text-sm font-semibold text-gray-700">Valor inicial</label>
-          <div className="flex border border-gray-300 rounded-md overflow-hidden focus-within:ring-2 focus-within:ring-red-500 bg-white">
+          <div className="flex border border-gray-300 rounded-md overflow-hidden focus-within:ring-2 focus-within:ring-green-500 bg-white">
             <span className="inline-flex items-center px-4 bg-gray-50 text-gray-500 text-sm border-r border-gray-300 font-medium">
               R$
             </span>
@@ -55,7 +55,7 @@ const CalculatorForm: React.FC<CalculatorFormProps> = ({ inputs, setInputs, onCa
         {/* Valor Mensal */}
         <div className="space-y-2">
           <label className="text-sm font-semibold text-gray-700">Valor mensal</label>
-          <div className="flex border border-gray-300 rounded-md overflow-hidden focus-within:ring-2 focus-within:ring-red-500 bg-white">
+          <div className="flex border border-gray-300 rounded-md overflow-hidden focus-within:ring-2 focus-within:ring-green-500 bg-white">
             <span className="inline-flex items-center px-4 bg-gray-50 text-gray-500 text-sm border-r border-gray-300 font-medium">
               R$
             </span>
@@ -74,7 +74,7 @@ const CalculatorForm: React.FC<CalculatorFormProps> = ({ inputs, setInputs, onCa
         {/* Taxa de Juros */}
         <div className="space-y-2">
           <label className="text-sm font-semibold text-gray-700">Taxa de juros</label>
-          <div className="flex border border-gray-300 rounded-md overflow-hidden focus-within:ring-2 focus-within:ring-red-500 bg-white">
+          <div className="flex border border-gray-300 rounded-md overflow-hidden focus-within:ring-2 focus-within:ring-green-500 bg-white">
             <span className="inline-flex items-center px-4 bg-gray-50 text-gray-500 text-sm border-r border-gray-300 font-medium">
               %
             </span>
@@ -102,7 +102,7 @@ const CalculatorForm: React.FC<CalculatorFormProps> = ({ inputs, setInputs, onCa
         {/* Período */}
         <div className="space-y-2">
           <label className="text-sm font-semibold text-gray-700">Período</label>
-          <div className="flex border border-gray-300 rounded-md overflow-hidden focus-within:ring-2 focus-within:ring-red-500 bg-white">
+          <div className="flex border border-gray-300 rounded-md overflow-hidden focus-within:ring-2 focus-within:ring-green-500 bg-white">
             <input
               type="text"
               inputMode="numeric"
@@ -128,7 +128,7 @@ const CalculatorForm: React.FC<CalculatorFormProps> = ({ inputs, setInputs, onCa
       <div className="flex flex-col md:flex-row items-center justify-between gap-4">
         <button
           onClick={onCalculate}
-          className="w-full md:w-auto px-12 py-4 bg-red-800 text-white font-bold rounded-lg hover:bg-red-900 transition-all shadow-lg active:transform active:scale-95 text-lg"
+          className="w-full md:w-auto px-12 py-4 bg-green-700 text-white font-bold rounded-lg hover:bg-green-800 transition-all shadow-lg active:transform active:scale-95 text-lg"
         >
           Calcular
         </button>
